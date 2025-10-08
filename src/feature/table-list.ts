@@ -15,9 +15,8 @@ let mesas: Mesa[] = [
 
 export function mostrarMesasDisponibles(): void {
   console.log(" Mesas disponibles:");
-  mesas.forEach((mesa) => {
-    if (!mesa.ocupada) {
-      console.log(`Mesa ${mesa.numero} (Capacidad: ${mesa.capacidad})`);
-    }
-  });
+mesas.forEach(mesa => {
+ const estado = mesa.ocupada ? "Ocupada " : "Disponible ";
+ console.log(`Mesa ${mesa.numero} (Capacidad: ${mesa.capacidad}) - ${estado}`);
+});
 }
